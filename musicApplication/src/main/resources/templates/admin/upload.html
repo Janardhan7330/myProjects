@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Songs-Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0f0f, #1e1e2e);
+            color: white;
+        }
+        .navbar {
+            background: #0a0a23 !important;
+            border-bottom: 3px solid #6A0DAD;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #6A0DAD !important;
+        }
+        .upload-container {
+            background: #292929;
+            color: #c53c27f4;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/image/logoB.png" alt="" width="70" height="50" class="me-2">
+            <span>MyTunes</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="/index">Index</a></li>
+                <li class="nav-item"><a class="btn btn-outline-light me-2" href="/admin/songs">Track List</a></li>
+                <li class="nav-item"><a class="btn btn-outline-light active" href="/admin/songs/add">Upload</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Upload Section -->
+<div class="container my-5 col-7">
+    <h1 class="mb-4">Upload Your Track</h1>
+    <div class="upload-container">
+        <form th:action="@{/admin/songs/add}" th:object="${song}" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="trackTitle" class="form-label">Track Title</label>
+                <input type="text" class="form-control" th:field="*{song}" placeholder="Enter track title">
+            </div>
+            <div class="mb-3">
+                <label for="artist" class="form-label">Artist Name</label>
+                <select class="form-control" th:field="*{artist}">
+                    <option value="A.R. Rahman">A.R. Rahman</option>
+                    <option value="Sid Sriram">Sid Sriram</option>
+                    <option value="Anirudh">Anirudh</option>
+                    <option value="Billie Eilish">Billie Eilish</option>
+                    <option value="Sonu Nigam">Sonu Nigam</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="language" class="form-label">Language</label>
+                <select class="form-control" th:field="*{language}">
+                    <option value="Tamil">Tamil</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-control" th:field="*{category}">
+                	<option value="Love">Love</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Motivation">Motivation</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Party">Party</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="trackFile" class="form-label">Upload Track</label>
+                <input type="text" class="form-control" th:field="*{trackFile}" id="trackFile" name="trackFile" accept="audio/*" placeholder="/TrackFile.mp3">
+            </div>
+            <div class="mb-3">
+                <label for="trackImage" class="form-label">Upload Cover Image</label>
+                <input type="text" class="form-control" th:field="*{trackImage}" id="trackImage" name="trackImage" accept="image/*" placeholder="/.trackImage.jpg">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Upload Track</button>
+            <a th:href="@{/admin/songs}" class="btn btn-secondary ml-2">Cancel</a>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
