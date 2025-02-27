@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contect Me</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color:rgb(57, 21, 75);
+        }
+        .header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color:rgb(57, 21, 75);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 50;   
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo{
+            font-size: 26px;
+            color: aqua;
+            font-family:'poppins',sans-serif;
+            font-weight: 600;
+            padding: 20px 50px;
+            letter-spacing: 5px;
+            text-shadow: 1px 1px 20px rgb(44, 181, 6);
+        }
+        .navbar{
+            margin: 0px 10%;
+        }
+        .navbar a{
+            padding:0px 15px;
+            font-size: 20px;
+        }
+        .navbar a:hover{
+            color: aqua;
+            transition: 0.2s ease-in-out;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        .act{
+            color: aqua;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+        }
+        h1{
+            color: greenyellow;
+            margin: 5px;
+            text-align: center;
+        }
+        .fill{
+            position: relative;
+            top: 150px;
+        }
+        input{
+            background-color:rgba(150, 150, 150, 0.451);
+            color:lightgray;
+            font-size: 20px;
+            padding:0px 5px;
+            width: 30%;
+            height: 55px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .fillform{
+            background-color:rgba(150, 150, 150, 0.451);
+            width: 50%;
+            height: 200px;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 20px;
+            color: lightgray;
+            border-radius: 10px;
+        }
+        button{
+            background-color: aqua;
+            color: rgb(57, 21, 75);
+            border: 3PX solid aqua;
+            border-radius: 20px;
+            font-size: 18PX;
+            font-weight: bold;
+            padding: 8px 15px;
+            margin-top: 20px;
+            font-family: 'poppins',sans-serif;
+        }
+        button:hover{
+            box-shadow: 0px 0px 10px 1px aqua;
+            transition: 0.4s;
+        }
+
+
+
+        @media screen and (max-width:600px) {
+  *{ padding: 0px;
+    margin: 0px ;
+}
+.header{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin: 0%;
+}
+.navbar a{
+    padding: 10px;
+    margin: 0px ;
+    font-size: 16px;
+    margin: 2px;
+}
+.fill{
+    position: relative;
+    top: 20px;
+    margin-bottom:50px ;
+}
+input{
+    background-color:rgba(150, 150, 150, 0.451);
+    color:lightgray;
+    font-size: 20px;
+    padding:0px 20px;
+    width: 60%;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.fillform{
+    width: 400px;
+    height: 120px;
+    margin: 2px;
+}
+button{
+    margin: 5px;
+}
+
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="Home.html">Home</a>               
+            <a href="About.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="Projects.html">Projects</a>
+            <a href="contact.html"  class="act">Contact</a>
+        </nav>
+    </header>
+    <center>
+        <form action="" class="fill">
+            <h1>Contact Me</h1>
+            <input type="text" id="Name" placeholder="Full Name"  required>
+            <input type="email" id="email" placeholder="Email Address" required><br>
+            <input type="text" id="Number" placeholder="Mobile Number" required>
+            <input type="text" id="Subject" placeholder="Email Subject" required><br>
+            <textarea type="text" class="fillform" id="Message" placeholder="Your Message" style="resize: none;"></textarea><br>
+            <button type="submit">SEND EMAIL</button>
+        </form>
+    </center>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

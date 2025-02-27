@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+            body{
+            margin: 0px;
+            padding: 0px;
+            background-color:rgb(57, 21, 75);
+        }
+        .header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color:rgb(57, 21, 75);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;   
+            z-index: 5;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo{
+            font-size: 26px;
+            color: aqua;
+            font-family:'poppins',sans-serif;
+            font-weight: 600;
+            padding: 20px 50px;
+            letter-spacing: 5px;
+            text-shadow: 1px 1px 20px rgb(44, 181, 6);
+        }
+        .navbar{
+            margin: 0px 10%;
+        }
+        .navbar a{
+            padding:0px 15px;
+            font-size: 20px;
+        }
+        .navbar a:hover{
+            color: aqua;
+            transition: 0.2s ease-in-out;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        .act{
+            color: aqua;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+        } 
+        .head{
+            color:white;
+            width: fit-content;
+            text-align: center;
+            position: relative;
+            top: 70px;
+            left: 40%;
+            margin-top: 13px;
+            padding:0px 0px  50px 0px;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+        .head:hover{
+            text-shadow: 0px 0px 19px rgb(200, 255, 0);
+            cursor: pointer;
+        }
+        span{
+            color: rgb(90, 246, 0);
+        }
+        .projects{
+            display: flex;
+            margin: 50px 0px 0px 0px ;
+        }
+        .container{
+            width: 400px;
+            margin: 10px;
+            aspect-ratio: 1/0.7;
+            border-radius: 8px;
+            position: relative;  
+        }
+        .container .image{
+            width:100%;
+            height:100%;
+            border-radius:initial;
+        }
+        .container .image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease-in-out;
+            object-position: 50% 90%;
+            border-radius: 20px;
+        }
+        .viewbtn{
+            color:rgb(255, 255, 255) ;
+            background-color:orangered;
+            padding: 8px 15px;
+            font-size: 18px;
+            font-weight: bolder;
+            border: 2px solid deeppink;
+            border-radius: 21px;
+            letter-spacing: 5px;
+        }
+        .viewbtn:hover{
+            box-shadow: 0px 0px 10px 5px rgb(20, 255, 47);
+            transition: 0.5s;
+        }
+        .container::after{
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 3px solid rgb(44, 181, 6);
+            border-radius: 20px;
+            opacity: 1;
+            transition: 0.4s ease-in-out;
+        }
+        .container:hover img{
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .container:hover::after{
+            opacity: 1;
+            inset: 20px;
+        }
+        .hover1{
+            width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            color: aqua;
+            z-index: -1;
+            cursor: pointer;
+        }
+        .container:hover .hover1{
+            color:rgb(0, 242, 255);
+            z-index: 2;
+            transition: 0.4s ease-in-out;
+        }
+        @media screen and (max-width:600px) {
+            *{
+                padding: 0px;
+                margin: 0px ;
+            }
+            .header{
+                position: sticky;
+                display: flex;
+                flex-direction: column;
+                padding: 0%;
+                margin: 0%;
+            }
+            .navbar a{
+                padding: 10px;
+                margin: 0px ;
+                font-size: 16px;
+                margin: 2px;
+            }
+            .contain{
+                display: flex;
+                flex-direction: column;
+            }
+            .projects{
+                display: flex;
+                flex-direction: column;
+                z-index: 1;
+                padding: 0px 30px;
+                margin-top: 30px;
+            }
+            .head{
+                position: relative;
+                top: 70px;
+                left: 30%;
+            }
+        }
+        @media screen and (min-width:900px) and
+                            (max-width:1023px) {
+            *{
+                padding: 0px;
+                margin: 0px ;
+            }
+            .header{
+                z-index: 10;
+            }
+            .viewbtn{
+                font-size: small;
+                margin-top: 10px;
+            }
+            .hover1{
+                padding:2% 0%;
+                margin: 0%;
+                font-size: small;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="Home.html">Home</a>               
+            <a href="About.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="Projects.html" class="act">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <p class="head">Latest <span> Projects </span></p>
+    <div class="projects">
+        <div class="container">
+            <div class="image">
+                <img src="img/OFOS.jpg" alt="">
+            </div>
+            <div class="hover1">
+                <h1>Online Food Ordering System</h1>
+                <p style="color: white;">An online food ordering system allows users to browse menus, place orders, and schedule deliveries.</p>
+                <a href="Home.html"><button onclick="project()"  class="viewbtn">VIEW PROJECT</button></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="img/OSS.jpeg" alt="">
+            </div>
+            <div class="hover1">
+                <h1>Online Shopping System Project</h1>
+                <p style="color: white;">Develop an online shopping platform that offers user-friendly navigation, secure payments, and diverse product options.</p>
+                <button onclick="project()" class="viewbtn">VIEW PROJECT</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="img/OTTB.webp" alt="">
+            </div>
+            <div class="hover1">
+                <h1>Online Train Ticket Booking</h1>
+                <p style="color: white;">Create a user-friendly online train booking system for seamless ticket purchases, schedules, and real-time updates.</p>
+                <button onclick="project()" class="viewbtn">VIEW PROJECT</button>
+            </div>
+        </div>
+    </div>
+    <div class="projects">
+        <div class="container">
+            <div class="image">
+                <img src="img/SMSP.png" alt="">
+            </div>
+            <div class="hover1">
+                <h1>Online Student Management System</h1>
+                <p style="color: white;">Develop an online student management system for efficient enrollment, attendance tracking, grading, and communication.</p>
+                <button onclick="project()" class="viewbtn">VIEW PROJECT</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="img/OMOSP.jpeg" alt="">
+            </div>
+            <div class="hover1">
+                <h1>Online Movie Database Explorer </h1>
+                <p style="color: white;">Create an online OTT platform for streaming movies, user subscriptions, personalized recommendations, and easy navigation.</p>
+                <button onclick="project()" class="viewbtn">VIEW PROJECT</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="img/OGP.jpg" alt="">
+            </div>
+            <div class="hover1">
+                <h1>Online Tip Tap Gaming</h1>
+                <p style="color: white;">Develop an engaging online tip tap gaming platform featuring multiplayer modes, vibrant graphics, and real-time challenges.</p>
+                <button onclick="project()" class="viewbtn">VIEW PROJECT</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function project(){
+            alert('My Projects are in my Links');
+        }
+    </script>
+</body>
+</html>

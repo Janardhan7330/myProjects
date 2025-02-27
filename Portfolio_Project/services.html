@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            background-color:rgb(57, 21, 75);
+            color: white;
+        }
+        .header{
+            position: sticky;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color:rgb(57, 21, 75);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            z-index: 3;  
+        }
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .logo{
+            font-size: 26px;
+            color: aqua;
+            font-family:'poppins',sans-serif;
+            font-weight: 600;
+            padding: 20px 50px;
+            letter-spacing: 5px;
+            text-shadow: 1px 1px 20px rgb(44, 181, 6);
+        }
+        .navbar{
+            margin: 0px 10%;
+        }
+        .navbar a{
+            font-family: 'poppien';
+            padding:0px 15px;
+            font-size: 20px;
+        }
+        .navbar a:hover{
+            color: aqua;
+            transition: 0.2s ease-in-out;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        .act{
+            color: aqua;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+        }
+        .head{
+            color: rgb(90, 246, 0);
+            text-align: center;
+            position: relative;
+            top: 70px;
+            margin-top: 15px;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+        .service{
+            width: auto;
+            height: auto;
+            padding: 30px 20px;
+            margin: 10px;
+            text-align: center;
+            background-color:rgb(109, 61, 133) ;
+            border-radius: 5px;
+        }
+        .contain{
+            display: flex;
+            margin: 12%;
+        }
+        i{
+            font-size: 35px;
+            color: aqua;
+            font-weight: bold;
+        }
+        button{
+            color:rgb(57, 21, 75) ;
+            background-color:aqua;
+            font-size: 20px;
+            font-weight: bolder;
+            border: 2px solid aqua;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            box-shadow: 1px 1px 25px aqua;
+        }
+        button:hover{
+            background-color: transparent;
+            color: aqua;
+            transition: 0.4s;
+        }
+        @media screen and (max-width:600px) {
+            *{
+                padding: 0px;
+                margin: 0px ;
+            }
+            .header{
+                position: sticky;
+                display: flex;
+                flex-direction: column;
+                padding: 0%;
+                margin: 0%;
+            }
+            .navbar a{
+                padding: 10px;
+                margin: 0px ;
+                font-size: 16px;
+                margin: 2px;
+            }
+            .contain{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="Home.html">Home</a>               
+            <a href="About.html">About</a>
+            <a href="services.html" class="act">Services</a>
+            <a href="Projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <h1 class="head">Our Services</h1>
+    <div class="contain">
+        <div class="service">
+            <i class="bi bi-code-slash"></i>
+            <h2>Web Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae distinctio dicta, quod excepturi consequuntur mollitia pariatur accusantium qui consectetur?</p>
+            <a href="contact.html"><button onclick="readmore()" >Read More</button></a>
+        </div>
+        <div class="service">
+            <i class="bi bi-pencil-fill"></i>
+            <h2>Graphic Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae distinctio dicta, quod excepturi consequuntur mollitia pariatur accusantium qui consectetur?</p>
+            <a href="contact.html"><button onclick="readmore()">Read More</button></a>
+        </div>
+        <div class="service">
+            <i class="bi bi-shop-window"></i>
+            <h2>Digital Marketing</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae distinctio dicta, quod excepturi consequuntur mollitia pariatur accusantium qui consectetur?</p>
+            <a href="contact.html"><button  onclick="readmore()">Read More</button></a>
+        </div>
+    </div>
+    <script>
+        function readmore(){
+            alert("Direct Contact Me!");
+        }
+    </script>
+</body>
+</html>

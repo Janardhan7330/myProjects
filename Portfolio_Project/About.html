@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color:rgb(57, 21, 75);
+            color: white;
+        }
+        .header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color:rgb(57, 21, 75);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;   
+            z-index: 2;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo{
+            font-size: 26px;
+            color: aqua;
+            font-family:'poppins',sans-serif;
+            font-weight: 600;
+            padding: 20px 50px;
+            letter-spacing: 5px;
+            text-shadow: 1px 1px 20px rgb(44, 181, 6);
+        }
+        .navbar{
+            margin: 0px 10%;
+        }
+        .navbar a{
+            padding:0px 15px;
+            font-size: 20px;
+        }
+        .navbar a:hover{
+            color: aqua;
+            transition: 0.2s ease-in-out;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        .act{
+            color: aqua;
+            text-decoration:underline;
+            text-decoration-color: chartreuse;
+        }
+        .about{
+            display: flex;
+            text-wrap: wrap;
+        }
+
+        .aboutimg{
+            margin: 10% 2%;
+            width: 50%;
+            overflow:hidden ;
+        }
+        .aboutcontent{
+            padding: 3%;
+            margin: 15% 2%;
+            width: 50%;
+        }
+        .readbtn{
+            padding: 10px 20px;
+            background-color: greenyellow;
+            color: rgb(232, 2, 236);
+            font-weight: bolder;
+            font-size: 18px;
+            letter-spacing: 2px;
+            border: 2px solid greenyellow;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+        .readbtn:hover{
+            background-color: transparent;
+            color:rgb(209, 2, 236);
+            box-shadow: 1px 1px 10px 5px rgb(90, 246, 0);
+            transition: 0.4s;
+        }
+        .aboutimg{
+            width: 500px;
+            height: 500px;
+            filter: drop-shadow(1px 1px 10px aqua);
+        }
+        span{
+            color: aqua;
+        }
+        h1,h2{
+            font-size: xx-large;
+        }
+        p{
+            line-height: 25px;
+        }
+        a{
+            text-decoration: none
+        }
+@media screen and (max-width:600px) {
+    *{ 
+    padding: 0px;
+    margin: 0px ;
+}
+.header{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.navbar a{
+    padding: 10px;
+    margin: 0px ;
+    font-size: 16px;
+    margin: 2px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+}
+.aboutcontent{
+    width: 100%;
+    margin: 10px;
+    padding: 0%;
+    text-align: center;
+}
+.aboutimg{
+    margin: 0%;
+    padding: 0%;
+
+}
+img{
+    padding:5% 10% ;
+    margin: 10px;
+    width: 350px;
+    height: 300px;
+    filter: drop-shadow(1px 1px 10px aqua);
+}
+
+}
+
+</style>
+<body>
+    <header class="header">
+        <a href="" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="Home.html" >Home</a>               
+            <a href="About.html" class="act">About</a>
+            <a href="services.html">Services</a>
+            <a href="Projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="about">
+        <div class="aboutimg"><img src="img/aboutimag.png" alt="" width="500" height="500"></div>
+        <div class="aboutcontent">
+            <h1>About <span>Me</span></h1>
+            <h2>Frontend Developer!</h2>
+            <p style="margin-top: 30px;">Recent Computer Science Diploma graduate with a strong foundation in programming and web development. Currently pursuing Full Stack Web Development with Java at Itvedant Institute in Chennai. Eager to leverage technical skills and creativity to contribute to a software company as a web developer. Passionate about creating dynamic web applications and committed to continuous learning in the tech field.</p>
+            <a href="Home.html"><button class="readbtn" onclick="aboutme()">About Me!</button></a>
+        </div>
+    </div>
+    <script>
+        function aboutme(){
+            alert("All about me in 'RESUME'! Dowload & see.");
+        }
+    </script>
+</body>
+</html>
